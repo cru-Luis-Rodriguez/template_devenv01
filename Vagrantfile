@@ -7,6 +7,7 @@ Vagrant::Config.run do |config|
     tom.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "chef/cookbooks"
       chef.run_list = ["recipe[mirror::default]", "recipe[tomcat::default]", "recipe[tomcat::jenkins]"]
+      #chef.run_list = [ "recipe[tomcat::default]", "recipe[tomcat::jenkins]" ]
     end
   end
 
