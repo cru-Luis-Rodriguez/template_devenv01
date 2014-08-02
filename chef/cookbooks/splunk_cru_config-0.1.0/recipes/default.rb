@@ -14,8 +14,8 @@ bash 'splunk_conf' do
     cd "#{node['splunk']['install_path']}/bin"
     ./splunk start --accept-license
     ./splunk enable boot-start
-    ./splunk add forward-server ulspla01.ccci.org:9997 -auth admin:changeme
-    ./splunk add monitor /opt/wildfly/standalone/log/server.log
+    ./splunk add forward-server #{node['splunk']['forward-server']}:#{node['splunk']['receiver_port']} -auth #{node['splunk']['auth']}:#{node['splunk']['pass']}
+    ./splunk add monitor #{node['splunk']['monitor_path']} 
     ./splunk restart
     EOH
   end
