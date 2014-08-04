@@ -1,4 +1,4 @@
-name             'splunk_cru_config'
+name             'splunk_config'
 maintainer       'Luis Rodriguez'
 maintainer_email 'luis.rodriguez@cru.org'
 license          'All rights reserved'
