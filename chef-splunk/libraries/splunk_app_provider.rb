@@ -16,7 +16,7 @@
 #
 require 'pathname'
 require 'chef/provider/lwrp_base'
-require_relative './helpers.rb'
+#require_relative './helpers.rb'
 require 'chef/mixin/shell_out'
 include Chef::Mixin::ShellOut
 
