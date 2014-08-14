@@ -1,3 +1,0 @@
-[submodule "puppet/modules/apt"]
-	path = puppet/modules/apt
-	url = git://github.com/camptocamp/puppet-apt.git
