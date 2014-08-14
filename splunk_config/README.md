@@ -1,52 +1,45 @@
-splunk_cru_config Cookbook
+splunk_config Cookbook
 ==========================
-TODO: Enter the cookbook description here.
+Configures spunk forwarder client
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
 
 Requirements
-------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+------------ 
 
-e.g.
-#### packages
-- `toaster` - splunk_cru_config needs toaster to brown your bagel.
+depends chef-splunk 
+
+supports :amazon, centos, debian, fedora, redhat, ubuntu
+
 
 Attributes
 ----------
 TODO: List your cookbook attributes here.
 
-e.g.
-#### splunk_cru_config::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['splunk_cru_config']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+# General settings
+
+default['splunk']['install_path’]= ‘default location for splunk install’.
+
+Use json on Opsworks Stack setting to provided attribute information. Attributes can not be nil
+
+default['splunk']['pass']='nil'
+default['splunk']['newpass']='nil'
+default['splunk']['forward_server']='nil'
+default['splunk']['receiver_port']='nil'
+default['splunk']['auth']='nil'
+default['splunk']['monitor_path']='nil'
+
 
 Usage
 -----
-#### splunk_cru_config::default
-TODO: Write usage instructions for each cookbook.
+#### splunk_config::default
 
-e.g.
-Just include `splunk_cru_config` in your node's `run_list`:
+Just include `splunk_config` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[splunk_cru_config]"
+    "recipe[splunk_config]"
   ]
 }
 ```
