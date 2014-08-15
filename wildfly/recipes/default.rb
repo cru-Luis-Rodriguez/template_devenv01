@@ -1,4 +1,4 @@
-# encoding: UTF-8
+#encoding: UTF-8
 # rubocop:disable LineLength
 #
 # Cookbook Name:: wildfly
@@ -19,6 +19,6 @@
 # limitations under the License.
 #
 
-include_recipe 'java'
+#iinclude_recipe 'java'
 include_recipe 'wildfly::install'
-include_recipe 'wildfly::mysql_connector' if node['wildfly']['mysql']['enabled']
+#include_recipe 'wildfly::mysql_connector' if node['wildfly']['mysql']['enabled']
