@@ -133,7 +133,7 @@ template File.join(wildfly['base'], 'standalone', 'configuration', 'mgmt-users.p
   group wildfly['group']
   mode '0600'
   variables(
-    mgmt_users: wildfly['users']['mgmt']
+  :mgmt_users => wildfly['users']['mgmt']
   )
 end
 
