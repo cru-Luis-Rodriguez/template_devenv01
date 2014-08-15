@@ -3,7 +3,6 @@ maintainer        "Agile Orbit"
 maintainer_email  "info@agileorbit.com"
 license           "Apache 2.0"
 description       "Installs Java runtime."
-long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version           "1.25.0"
 
 recipe "java::default", "Installs Java runtime"
