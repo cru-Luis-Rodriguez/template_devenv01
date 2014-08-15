@@ -1,0 +1,10 @@
+[tcpout]
+defaultGroup = <%= @default_group %>
+disabled=false
+
+[tcpout:<%= @default_group %>]
+server=<%= @splunk_servers %>
+forwardedindex.0.whitelist = .*
+forwardedindex.1.blacklist = _.*
+forwardedindex.2.whitelist = _audit
+forwardedindex.filter.disable = false
