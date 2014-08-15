@@ -9,6 +9,6 @@ version          '0.1.9'
 
 supports 'centos'
 
-depends 'apt'
-depends 'yum'
-depends 'java', '~> 1.22'
+#depends 'apt'
+#depends 'yum'
+#depends 'java', '~> 1.22'
